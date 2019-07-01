@@ -1,0 +1,20 @@
+{
+  "presets": [
+    "@vue/app"
+  ],
+  "plugins": [
+    [
+      "component",
+      {
+      }
+    ],
+    [
+      "module-resolver",
+      {
+        "alias": {
+          "src": "./src"
+        }
+      }
+    ]
+  ]
+}
