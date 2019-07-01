@@ -9,9 +9,9 @@ Run:
 	1. Npm init -y
 	2. Npm install
 	3. Npm update
-(fix sass library not downloading all components)
+	(fix sass library not downloading all components)
 	4.  node node_modules/node-sass/scripts/install.js
-npm rebuild node-sass
+    5.npm rebuild node-sass
 
 ## Run and build
 Run server (or build production):
@@ -21,7 +21,7 @@ npm run dev (Test server points to local node server running on port 3000)
 ## File Structure
 
 ```
-/
+
 
 ├── README.md
 ├── babel.config.js
