@@ -1,13 +1,28 @@
+# Ackrell Feed Admin Website
+Webpage for Ackrell Feed Admin
 
+## Setup
+Ensure at least 512gb memory ("free -m") free for npm run build
+
+Copy source directory to /opt/<directory>
+Run:
+	1. Npm init -y
+	2. Npm install
+	3. Npm update
+(fix sass library not downloading all components)
+	4.  node node_modules/node-sass/scripts/install.js
+npm rebuild node-sass
+
+## Run and build
+Run server (or build production):
+npm run dev (Test server points to local node server running on port 3000)
+(production) npm run build (copy contents of /dist to public folder of webserver)
 
 ## File Structure
-
-Within the download you'll find the following directories and files:
 
 ```
 /
 
-├── CHANGELOG.md
 ├── README.md
 ├── babel.config.js
 ├── package.json
@@ -18,62 +33,77 @@ Within the download you'll find the following directories and files:
 │   ├── assets
 │   │   ├── img
 │   │   └── scss
-│   │       ├── material-kit
-│   │       └── material-kit.scss
+│   │       ├── material-dashboard
+│   │       └── material-dashboard.scss
 │   ├── components
-│   │   ├── Badge.vue
 │   │   ├── Dropdown.vue
+│   │   ├── Feed.vue
 │   │   ├── Modal.vue
 │   │   ├── Pagination.vue
-│   │   ├── Parallax.vue
-│   │   ├── Slider.vue
-│   │   ├── Tabs.vue
-│   │   ├── cards
-│   │   │   ├── EditProfileForm.vue
-│   │   │   ├── LoginCard.vue
+│   │   ├── PreviewFeed.vue
+│   │   ├── Sidebar.vue
+│   │   ├── Cards
+│   │   │   ├── ChartCard.vue
 │   │   │   ├── NavTabsCard.vue
-│   │   │   ├── OfferCard.vue
-│   │   │   ├── SignUpCardLeft.vue
-│   │   │   └── SignUpCardRight.vue
+│   │   │   └── StatsCard.vue
+│   │   ├── NotificationPlugin
+│   │   │   ├── Notification.vue
+│   │   │   ├── Notifications.vue
+│   │   │   └── index.js
+│   │   ├── SidebarPlugin
+│   │   │   ├── Sidebar.vue
+│   │   │   ├── SidebarLink.vue
+│   │   │   └── index.js
+│   │   ├── Tables
+│   │   │   ├── NavTabsTable.vue
+│   │   │   ├── OrderedTable.vue
+│   │   │   └── SimpleTable.js
 │   │   └── index.js
-│   ├── helpers
-│   │   ├── auth-header.vue
-│   │   └── index.js
-│   ├── layout
-│   │   ├── MainFooter.vue
-│   │   ├── MainNavbar.vue
-│   │   ├── MainNavbarSigned.vue
-│   │   └── MobileMenu.vue
+│   ├── globalComponents.js
+│   ├── globalDirectives.js
 │   ├── main.js
-│   ├── plugins
-│   │   ├── globalComponents.js
-│   │   ├── globalDirectives.js
-│   │   ├── globalMixins.js
-│   │   └── material-kit.js
-│   ├── router.js
-│   ├── services
-│   │   ├── index.js
-│   │   └── userservice.js
-│   ├── store
-│   │   ├── alert.module.js
-│   │   ├── authentication.module.js
-│   │   ├── users.module.js
+│   ├── pages
+│   │   ├── AckrellFeed.vue
+│   │   ├── AckrellPreview.vue
+│   │   ├── Approved.vue
+│   │   ├── Channel.vue
+│   │   ├── Dashboard.vue
+│   │   ├── Maps.vue
+│   │   ├── Newsletter.vue
+│   │   ├── Pending.vue
+│   │   ├── Tablelist.vue
+│   │   ├── UserProfile.vue
+│   │   ├── Cards
+│   │   │   ├── ChartCard.vue
+│   │   │   ├── NavTabsCard.vue
+│   │   │   └── StatsCard.vue
+│   │   ├── NotificationPlugin
+│   │   │   ├── Notification.vue
+│   │   │   ├── Notifications.vue
+│   │   │   └── index.js
+│   │   ├── SidebarPlugin
+│   │   │   ├── Sidebar.vue
+│   │   │   ├── SidebarLink.vue
+│   │   │   └── index.js
+│   │   ├── Tables
+│   │   │   ├── NavTabsTable.vue
+│   │   │   ├── OrderedTable.vue
+│   │   │   └── SimpleTable.js
 │   │   └── index.js
-│   └── views
-│       ├── Index.vue
-│       ├── Landing.vue
-│       ├── Login.vue
-│       ├── Profile.vue
-│       └── components
-│           ├── BasicElementsSection.vue
-│           ├── JavascriptComponentsSection.vue
-│           ├── NavPillsSection.vue
-│           ├── NavigationSection.vue
-│           ├── NotificationsSection.vue
-│           ├── SmallNavigationSection.vue
-│           ├── TabsSection.vue
-│           └── TypographyImagesSection.vue
-└── vue.config.js
+│   ├── routes
+│   │   └── routes.js
+│   ├── store
+│   │   ├── actions.js
+│   │   ├── getters.js
+│   │   ├── mutations.js
+│   │   ├── state.js
+│   │   └── index.js
+│   └── utils
+│       ├── axios.js
+│       ├── common.js
+│       ├── storage.js
+│       └── index.js
+└── material-dashboard.js
 
 ```
 
