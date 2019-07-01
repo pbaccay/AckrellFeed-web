@@ -5,13 +5,17 @@ Webpage for Ackrell Feed Admin
 Ensure at least 512gb memory ("free -m") free for npm run build
 
 Copy source directory to /opt/<directory>
+
 Run:
-	1. Npm init -y
-	2. Npm install
-	3. Npm update
-	(fix sass library not downloading all components)
-	4.  node node_modules/node-sass/scripts/install.js
-    5.npm rebuild node-sass
+1. Npm init -y
+2. Npm install	
+3. Npm update	
+(fix sass library not downloading all components)	
+4. node node_modules/node-sass/scripts/install.js
+5. npm rebuild node-sass
+	
+	
+   
 
 ## Run and build
 Run server (or build production):
